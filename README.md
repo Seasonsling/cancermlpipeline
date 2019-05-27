@@ -6,13 +6,13 @@ We provide info on:
 -How to
 -How to 
 ****
-	
+
 |Author|ChengChen|
-|---|---
+|---|---|
 |E-mail|3150105343@zju.edu.cn|
 
 |Author|Ling Tianyi|
-|---|---
+|---|---|
 |E-mail|3160102182@zju.edu.cn|
 
 ## Table of Contents
@@ -50,7 +50,7 @@ this is algorithm introduction
 dependencies 
 
 ### Run_Prediction.py
-py
+balabala
 
 ### prediction.R
 
