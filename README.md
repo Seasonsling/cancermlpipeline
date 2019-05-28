@@ -1,10 +1,28 @@
+---
+markdown: kramdown
+---
+
+<head>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            }
+        });
+    </script>
+</head>
+
 README
 ===========================
+
 General description for cancermlpipeline
 We provide info on:
 -How to
 -How to
 -How to 
+
 ****
 
 |Author|ChengChen|
