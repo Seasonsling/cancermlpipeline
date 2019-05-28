@@ -1,18 +1,5 @@
----
 markdown: kramdown
----
 
-<head>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            tex2jax: {
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-            inlineMath: [['$','$']]
-            }
-        });
-    </script>
-</head>
 
 README
 ===========================
@@ -113,23 +100,18 @@ In our scripts, we take both of them into consideration.
 
 **The algorithm flow** is as follows:
 
-1. For each sample $x$ in a few classes, calculate the distance from all samples in a few sample sets by Euclidean distance, and get its $k-nearest neighbors$.
+1. For each sample $x$ in a few classes, calculate the distance from all samples in a few sample sets by Euclidean distance, and get its *k-nearest neighbors*​.
 
-2. Set a sampling ratio according to the sample imbalance ratio to determine the sampling magnification $N$. For each minority sample $x$, randomly select several samples from its $k-nearest neighbors$, assuming that the selected neighbor is $\hat{x}$ .
+2. Set a sampling ratio according to the sample imbalance ratio to determine the sampling magnification *N*. For each minority sample <img src="https://latex.codecogs.com/svg.latex?\inline&space;\dpi{100}&space;$\emph{x}$" title="$\emph{x}$" />, randomly select several samples from its *k-nearest neighbors*, assuming that the selected neighbor is <img src="https://latex.codecogs.com/svg.latex?\dpi{100}&space;\small&space;\widehat{x}" title="\small \widehat{x}" /> .
 
-3. For each randomly selected neighbor $\hat{x}$, construct a new sample with the original sample according to the following formula
-   $$
-   x_{new} = x + rand(0, 1) × (\hat{x}-x)
-   $$
-
-   <center>
-       <img src="README.assets/311426-26e19e9f443dbba3.png">
-       <br>
-       <div padding: 2px;">sketch map of SMOTE</div>
-   </center>
-
+3. For each randomly selected neighbor <img src="https://latex.codecogs.com/svg.latex?\dpi{100}&space;\small&space;\widehat{x}" title="\small \widehat{x}" />, construct a new sample with the original sample according to the following formula
+  
+   <img src="https://latex.codecogs.com/gif.latex?x_{new}&space;=&space;x&space;&plus;&space;rand(0,&space;1)&space;×&space;(\hat{x}-x)" title="x_{new} = x + rand(0, 1) × (\hat{x}-x)" />
    
-
+<div align = center>
+     <img src="README.assets/311426-26e19e9f443dbba3.png">
+     <div><B>sketch map of SMOTE</B></div>
+   </div>
 **The main pseudo-code**:
 
 ***Algorithm SMOTE(T, N, k)***
@@ -137,8 +119,11 @@ In our scripts, we take both of them into consideration.
 *neighbors k*
 **Output:** *(N/100) \* T synthetic minority class samples*
 
-<div align="left"><img src="README.assets/1559028494150.png"/>
-<center><B>pseudo-code of SMOTE</B></center></div>
+<div>
+  <img src="README.assets/1559034482209.png" width = "90%", height = "90%"/>
+  <div align = "center"><B>pseudo-code of SMOTE</B></div>
+</div>
+
 
 The SMOTE algorithm discards the practice of random oversampling and replicating samples, which can prevent the problem of random oversampling and over-fitting. It has been proved that this method can improve the performance of the classifier.
 
