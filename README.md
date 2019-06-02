@@ -168,10 +168,10 @@ Due to random forest algorithm meets difficulties when dealing with those featur
 
 <div>
   <div align = "center">
-  	<img src="README.assets/1559116484461.png" width = "55%" align = "left"/>
-  	<span style="position: absolute; top: 0px; left: 10px;"><B>A</B></span> 
+  	<img src="README.assets/1559116484461.png" width = "55%" align = "left"/> 
   	<img src="README.assets/1559118453159.png" width = "40%" align = "right"/>
   	<span style="position: absolute; top: 0px; left: 490px;"><B>B</B></span> 
+    <span style="position: absolute; top: 0px; left: 10px;"><B>A</B></span> 
   </div>	
     <div align = "left"><br><B><i>Figure2 A) Sturcture of randomforest.</i></B> It randomize the variables (columns) and data (rows), generates thousands of classification trees, and then summarize the results of the classification tree. <B><i>B) Importance of top 20 features(genes)</i></B></div>
 </div>
