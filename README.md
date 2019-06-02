@@ -160,6 +160,12 @@ Random forests are among the most popular machine learning methods thanks to the
 
 Random forest consists of a number of decision trees. Every node in the decision trees is a condition on a single feature, designed to split the dataset into two so that similar response values end up in the same set. The measure based on which the (locally) optimal condition is chosen is called impurity. For classification, it is typically either [Gini impurity](http://en.wikipedia.org/wiki/Decision_tree_learning#Gini_impurity) or [information gain/entropy](http://en.wikipedia.org/wiki/Information_gain_in_decision_trees) and for regression trees it is [variance](http://en.wikipedia.org/wiki/Variance). Thus when training a tree, it can be computed how much each feature decreases the weighted impurity in a tree. For a forest, the impurity decrease from each feature can be averaged and the features are ranked according to this measure.
 
+but there are a few things to keep in mind when using the impurity based ranking. 
+
+> Firstly, feature selection based on impurity reduction **is biased towards preferring variables with more categories**. Secondly, when the **dataset has two (or more) correlated features, then from the point of view of the model, any of these correlated features can be used as the predictor**, with no concrete preference of one over the others. But once one of them is used, the importance of others is significantly reduced since effectively the impurity they can remove is already removed by the first feature. As a consequence, **they will have a lower reported importance**. Therefore when we interpret the data, it can lead to the incorrect conclusion that one of the variables is a strong predictor while the others in the same group are unimportant, while actually they are very close in terms of their relationship with the response variable.
+
+Due to random forest algorithm meets difficulties when dealing with those features with high correlation, We tried another feature selection method which has been proved to handle this problem effectively: SVMRFECV.
+
 <div>
   <div align = "center">
   	<img src="README.assets/1559116484461.png" width = "60%", height = "50%" align = "left"/>
@@ -169,16 +175,6 @@ Random forest consists of a number of decision trees. Every node in the decision
   </div>	
     <div align = "left"><br><B><i>Figure2 A) Sturcture of randomforest.</i></B> It randomize the variables (columns) and data (rows), generates thousands of classification trees, and then summarize the results of the classification tree. <B><i>B) Importance of top 20 features(genes)</i></B></div>
 </div>
-
-
-but there are a few things to keep in mind when using the impurity based ranking. 
-
-> Firstly, feature selection based on impurity reduction **is biased towards preferring variables with more categories**. Secondly, when the **dataset has two (or more) correlated features, then from the point of view of the model, any of these correlated features can be used as the predictor**, with no concrete preference of one over the others. But once one of them is used, the importance of others is significantly reduced since effectively the impurity they can remove is already removed by the first feature. As a consequence, **they will have a lower reported importance**. Therefore when we interpret the data, it can lead to the incorrect conclusion that one of the variables is a strong predictor while the others in the same group are unimportant, while actually they are very close in terms of their relationship with the response variable.
-
-Due to random forest algorithm meets difficulties when dealing with those features with high correlation, We tried another feature selection method which has been proved to handle this problem effectively: SVMRFECV.
-
-
-
 #### SVMRFECV
 
 SVM-RFE was introduced by Guyon et al. for selecting genes from microarray data analysis for cancer classification. It includes four steps: 
@@ -380,16 +376,27 @@ Accuracy is a great measure but only when we have symmetric datasets where value
 #### Python script dependencies:
 
 seaborn\==0.9.0
+
 pandas\==0.24.2
+
 PDPbox\==0.2.0
+
 shap\==0.29.1
+
 numpy\==1.16.2
+
 imbalanced_learn\==0.4.3
+
 matplotlib\==3.0.3
+
 eli5\==0.8.2
+
 ipython\==7.5.0
+
 imblearn\==0.0
+
 scikit_learn\==0.21.2
+
 tensorflow==1.13.1
 
 the method of 
