@@ -176,6 +176,11 @@ Due to random forest algorithm meets difficulties when dealing with those featur
     <div align = "left"><br><B><i>Figure2 A) Sturcture of randomforest.</i></B> It randomize the variables (columns) and data (rows), generates thousands of classification trees, and then summarize the results of the classification tree. <B><i>B) Importance of top 20 features(genes)</i></B></div>
 </div>
 
+
+
+
+
+
 #### SVMRFECV
 
 SVM-RFE was introduced by Guyon et al. for selecting genes from microarray data analysis for cancer classification. It includes four steps: 
