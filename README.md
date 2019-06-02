@@ -169,7 +169,7 @@ Due to random forest algorithm meets difficulties when dealing with those featur
 <div>
   <div align = "center">
     <span style="position: absolute; top: 0px; left: 10px;"><B>A</B></span> 
-  	<img src="README.assets/1559116484461.png" width = "50%"/> 
+  	<img src="README.assets/1559116484461.png" width = "45%"/> 
     <span style="position: absolute; top: 0px; left: 490px;"><B>B</B></span> 
   	<img src="README.assets/1559118453159.png" width = "40%" align = "right"/>
   </div>	
