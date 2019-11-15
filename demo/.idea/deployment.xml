@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="root@10.71.115.211:7012" showNewOnTargetInSync="false">
+    <serverData>
+      <paths name="10.71.115.211">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/root/Data mining of Cancer" local="$PROJECT_DIR$" web="/root/Data mining of Cancer" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Copy of project-level server '10.71.115.211'">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/root/Data mining of Cancer" local="$PROJECT_DIR$" web="/root/Data mining of Cancer" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="root@10.71.115.211:7012">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/root/Data mining of Cancer" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
