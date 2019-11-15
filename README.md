@@ -27,7 +27,7 @@ We hope to establish **a standardized pipeline for modeling on different cancers
 
 [Github地址]( https://github.com/Seasonsling/cancermlpipeline )：https://github.com/Seasonsling/cancermlpipeline
 
- ![img](README.assets/Fri, 15 Nov 2019 145854.png) 
+ ![img](README.assets/145854.png) 
 
 
 
